@@ -1,0 +1,8 @@
+<h1>Positions in Baseball</h1>
+<ul>
+  <% 9.times do |i|  %>
+    <a href="/positions/<%= @positions[i] %>">
+    <li><%= @positions[i] %></li>
+    </a>
+  <% end %>
+</ul>

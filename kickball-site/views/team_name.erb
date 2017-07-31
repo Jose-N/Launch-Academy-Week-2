@@ -1,0 +1,6 @@
+<h1><%= @team_name %></h1>
+<% @this_teams_players.each do |player|%>
+  <ul>
+    <li><%= player.position %>: <%= player.name %></li>
+  </ul>
+<% end %>

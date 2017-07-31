@@ -1,1 +1,19 @@
-<!--  YOUR CODE HERE -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= @name %></title>
+  </head>
+  <body>
+    <h1><%= @name %></h1>
+    <ul>
+      <% @ingredients.each do |ingredient| %>
+        <li><%= ingredient %></li>
+      <% end %>
+    </ul>
+    <ol>
+      <% @directions.each do |direction|  %>
+        <li><%= direction%></li>
+      <% end %>
+    </ol>
+  </body>
+</html>

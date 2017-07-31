@@ -1,0 +1,9 @@
+<% @all_teams.each do |team_name|%>
+  <ul>
+    <h1>
+      <a href='<%= team_name.name %>'>
+      <li><%= team_name.name %></li>
+      </a>
+    </h1>
+  </ul>
+<% end %>
