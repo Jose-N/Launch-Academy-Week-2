@@ -6,7 +6,7 @@ require_relative "models/team_data"
 set :bind, '0.0.0.0'  # bind to all interfaces
 
 get "/" do
-  "<h1>The LACKP Homepage<h1>"
+  erb :index
 end
 
 get '/teams' do
