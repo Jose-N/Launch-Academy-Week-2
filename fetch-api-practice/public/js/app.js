@@ -8,15 +8,14 @@ fetch('http://localhost:4567/books.json')
       throw(error);
     }
   })
-  .then(response => response.text())
-  .then(function(body) {
-    let jsonBody = JSON.parse(body);
-    console.log(jsonBody);
+  .then(response => response.json())
+  .then(body => {
+    console.log(body);
     let booksUl = document.getElementById('books');
-    jsonBody['books'].forEach(function(bookHash) {
+    body['books'].forEach(function(bookHash) {
       let liElement = document.createElement('li');
-      let book = document.createTextNode(bookHash['name']);
-      booksUl.appendChild(liElement.appendChild(book));
+      liElement.innerHTML = `${bookHash['name']}`;
+      booksUl.appendChild(liElement);
     });
   })
   .catch(error => console.error(`Error in fetch: ${error.meessage}`));
