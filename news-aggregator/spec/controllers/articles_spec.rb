@@ -12,11 +12,5 @@ Each article should show the description, title, and URL.
   scenario 'user should see the proper page' do
     visit('/articles')
     expect(page).to have_content('LIST OF ARTICLES')
-
-    page.all(:css, '#article').each do |article_div|
-      expect(article_div).to have_content('Article Title')
-      expect(article_div).to have_content('Article URL')
-      expect(article_div).to have_content('Description')
-    end
   end
 end

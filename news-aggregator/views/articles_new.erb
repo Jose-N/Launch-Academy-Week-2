@@ -1,0 +1,19 @@
+<h1>SUBMIT A NEW ARTICLE</h1>
+<form action="/articles/new" method="post">
+  <p><%= @error_name %></p>
+  <label for="article_name">Article Title</label>
+  <input id="article_name" type="text" name="article_name" value="<%= @name%>">
+  <br>
+
+  <p><%= @error_url %></p>
+  <label for="article_url">Article URL</label>
+  <input id="article_url" type="text" name="article_url" value="<%= @url%>">
+  <br>
+
+  <p><%= @error_desc %></p>
+  <label for="article_description">Description</label>
+  <input id="article_description" type="text" name="article_description" value="<%= @description%>">
+  <br>
+
+  <input type="submit" value="Submit">
+</form>

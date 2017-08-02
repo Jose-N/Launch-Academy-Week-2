@@ -1,0 +1,11 @@
+<h1>LIST OF ARTICLES</h1>
+<% @array_of_articles.each do |submission_line|%>
+<br>
+<p>Article Title</p>
+<p><%= submission_line[0] %></p>
+<p>Article URL</p>
+<a href="<%= submission_line[1] %>" target="_blank"><p><%= submission_line[1] %></p></a>
+<p>Description</p>
+<p><%= submission_line[2] %></p>
+<% end %>
+<br>

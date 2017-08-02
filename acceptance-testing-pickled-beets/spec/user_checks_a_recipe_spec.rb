@@ -45,6 +45,8 @@ feature "User checks a recipe's deliciousness", %(
     click_button 'Submit'
     expect(page).to have_content("\"hubcap\" is not a delicious recipe!")
 
+    require 'launchy'
+    save_and_open_page
     click_link('Try again!')
     expect(page).to have_content("Recipe Name")
   end
